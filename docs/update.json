@@ -1,13 +1,13 @@
 {
-  "version": "2.1.6-release",
+  "version": "2.1.7-release",
   "release": true,
-  "pyinstaller_download_url": "https://github.com/geanferreira96/gbox-flet-mirror/releases/download/v2.1.6-release/pyinstaller-2.1.6-release.zip",
+  "pyinstaller_download_url": "https://github.com/geanferreira96/gbox-flet-mirror/releases/download/v2.1.7-release/pyinstaller-2.1.7-release.zip",
   "nuitka_download_url": "",
   "installer_url": "https://github.com/geanferreira96/gbox-flet-mirror/raw/main/bin/GboxInstaller.exe",
   "compiler": "pyinstaller",
   "beta_users": [],
-  "pyinstaller_sha256": "ebb3e73ac7a29edc34fd686a9bfe9992d1a58e9765c3c6d3eaadcb16b276e86d",
+  "pyinstaller_sha256": "90cc01139eaa356ac560575db3135e24980d09aa499d4b948043f92a9e416d19",
   "nuitka_sha256": "",
   "github_release": "https://github.com/geanferreira96/gbox-flet-mirror/releases/latest",
-  "updated_at": "2026-04-24T18:57:07Z"
+  "updated_at": "2026-04-27T17:44:48Z"
 }
