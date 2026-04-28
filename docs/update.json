@@ -1,13 +1,20 @@
 {
-  "version": "2.1.7-release",
+  "version": "2.2.8-release",
   "release": true,
-  "pyinstaller_download_url": "https://github.com/geanferreira96/gbox-flet-mirror/releases/download/v2.1.7-release/pyinstaller-2.1.7-release.zip",
-  "nuitka_download_url": "",
-  "installer_url": "https://github.com/geanferreira96/gbox-flet-mirror/raw/main/bin/GboxInstaller.exe",
+  "win_pyinstaller_download_url": "https://github.com/geanferreira96/gbox-flet-mirror/releases/download/v2.2.8-release-16/win-pyinstaller-2.2.8-release.zip",
+  "win_nuitka_download_url": "",
+  "linux_pyinstaller_download_url": "https://github.com/geanferreira96/gbox-flet-mirror/releases/download/v2.2.8-release-16/linux-pyinstaller-2.2.8-release.zip",
+  "linux_nuitka_download_url": "",
+  "win_installer_url": "https://github.com/geanferreira96/gbox-flet-mirror/releases/download/v2.2.8-release-16/win-installer-2.2.8-release.exe",
+  "linux_installer_url": "https://github.com/geanferreira96/gbox-flet-mirror/releases/download/v2.2.8-release-16/linux-installer-2.2.8-release.sh",
   "compiler": "pyinstaller",
   "beta_users": [],
-  "pyinstaller_sha256": "90cc01139eaa356ac560575db3135e24980d09aa499d4b948043f92a9e416d19",
-  "nuitka_sha256": "",
-  "github_release": "https://github.com/geanferreira96/gbox-flet-mirror/releases/latest",
-  "updated_at": "2026-04-27T17:44:48Z"
+  "win_pyinstaller_sha256": "286e85744c59feee79fb91f27931d65ad4abd329c4f3d6eaea4d9a06be25927d",
+  "win_nuitka_sha256": "",
+  "linux_pyinstaller_sha256": "9371cbf4596b4bb5d10499b7e2d8691f0e0c10d2f17656b9bc9dad1c654553b2",
+  "linux_nuitka_sha256": "",
+  "pyinstaller_download_url": "https://github.com/geanferreira96/gbox-flet-mirror/releases/download/v2.2.8-release-16/win-pyinstaller-2.2.8-release.zip",
+  "nuitka_download_url": "",
+  "installer_url": "https://github.com/geanferreira96/gbox-flet-mirror/releases/download/v2.2.8-release-16/win-installer-2.2.8-release.exe",
+  "github_release": "https://github.com/geanferreira96/gbox-flet-mirror/releases/tag/v2.2.8-release-16"
 }
