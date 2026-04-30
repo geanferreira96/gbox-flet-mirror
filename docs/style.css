@@ -76,13 +76,11 @@ header {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: 800;
-  background: linear-gradient(135deg, #2563eb, #10b981);
-  color: #fff;
+  object-fit: cover;
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
