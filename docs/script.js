@@ -23,12 +23,16 @@ const savedTheme =
   (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 setTheme(savedTheme);
 
-function updateBtn(btn, url) {
+function updateBtn(btn, url, labelWhenOk) {
   if (!url || url === "#") {
     btn.classList.add("disabled");
     btn.textContent = "Indisponível no momento";
     btn.removeAttribute("href");
     return;
+  }
+  btn.classList.remove("disabled");
+  if (labelWhenOk) {
+    btn.textContent = labelWhenOk;
   }
   btn.href = url;
 }
@@ -53,19 +57,26 @@ async function loadUpdateInfo() {
     document.getElementById("last-update").textContent = updateText;
     document.getElementById("compiler").textContent = data.compiler || "Indisponível";
 
-    // Prioridade para as chaves de instalador do mirror.
+    // Chaves alinhadas ao build-executables.yml (bloco Python que grava update.json).
     updateBtn(
       document.getElementById("win-installer-link"),
-      data.win_installer_url || data.installer_url || ""
+      data.win_installer_url || data.installer_url || "",
+      "Baixar Instalador Windows (.exe)"
     );
-    updateBtn(document.getElementById("linux-installer-link"), data.linux_installer_url || "");
+    updateBtn(
+      document.getElementById("linux-installer-link"),
+      data.linux_installer_url || "",
+      "Baixar Instalador Linux (.deb)"
+    );
     updateBtn(
       document.getElementById("android-v8a-link"),
-      data.android_arm64_v8a_download_url || ""
+      data.android_arm64_v8a_download_url || "",
+      "Baixar Android APK (arm64-v8a)"
     );
     updateBtn(
       document.getElementById("android-v7a-link"),
-      data.android_armeabi_v7a_download_url || ""
+      data.android_armeabi_v7a_download_url || "",
+      "Baixar Android APK (armeabi-v7a)"
     );
 
     const releaseLink = document.getElementById("github-release-link");
