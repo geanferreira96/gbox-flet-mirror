@@ -59,6 +59,14 @@ async function loadUpdateInfo() {
       data.win_installer_url || data.installer_url || ""
     );
     updateBtn(document.getElementById("linux-installer-link"), data.linux_installer_url || "");
+    updateBtn(
+      document.getElementById("android-v8a-link"),
+      data.android_arm64_v8a_download_url || ""
+    );
+    updateBtn(
+      document.getElementById("android-v7a-link"),
+      data.android_armeabi_v7a_download_url || ""
+    );
 
     const releaseLink = document.getElementById("github-release-link");
     const rel = data.github_release || "https://github.com/geanferreira96/gbox-flet-mirror/releases/latest";
@@ -70,6 +78,8 @@ async function loadUpdateInfo() {
     document.getElementById("compiler").textContent = "Erro ao carregar";
     updateBtn(document.getElementById("win-installer-link"), "");
     updateBtn(document.getElementById("linux-installer-link"), "");
+    updateBtn(document.getElementById("android-v8a-link"), "");
+    updateBtn(document.getElementById("android-v7a-link"), "");
   }
 }
 
