@@ -132,8 +132,15 @@ h2 {
 .button-group {
   display: flex;
   gap: 12px;
-  margin-top: 22px;
   flex-wrap: wrap;
+}
+
+.button-group-desktop {
+  margin-top: 22px;
+}
+
+.button-group-android {
+  margin-top: 14px;
 }
 
 .button {
