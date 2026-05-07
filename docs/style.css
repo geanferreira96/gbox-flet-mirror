@@ -147,14 +147,28 @@ h2 {
   flex: 1;
   min-width: 220px;
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 48px;
+  min-height: 56px;
+  padding: 8px 14px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 700;
   background: var(--accent-color);
   color: #fff;
+}
+
+.button-text-main {
+  line-height: 1.1;
+}
+
+.button-text-sub {
+  margin-top: 3px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.1;
+  opacity: 0.9;
 }
 
 .button.secondary {
