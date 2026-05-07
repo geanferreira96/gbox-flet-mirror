@@ -23,7 +23,7 @@ const savedTheme =
   (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 setTheme(savedTheme);
 
-function updateBtn(btn, url, labelWhenOk) {
+function updateBtn(btn, url, labelWhenOk, labelIsHtml = false) {
   if (!url || url === "#") {
     btn.classList.add("disabled");
     btn.textContent = "Indisponível no momento";
@@ -32,7 +32,11 @@ function updateBtn(btn, url, labelWhenOk) {
   }
   btn.classList.remove("disabled");
   if (labelWhenOk) {
-    btn.textContent = labelWhenOk;
+    if (labelIsHtml) {
+      btn.innerHTML = labelWhenOk;
+    } else {
+      btn.textContent = labelWhenOk;
+    }
   }
   btn.href = url;
 }
@@ -71,12 +75,14 @@ async function loadUpdateInfo() {
     updateBtn(
       document.getElementById("android-v8a-link"),
       data.android_arm64_v8a_download_url || "",
-      "Baixar Android APK (arm64-v8a)"
+      '<span class="button-text-main">Android (Recomendado)</span><span class="button-text-sub">Para a maioria dos celulares atuais</span>',
+      true
     );
     updateBtn(
       document.getElementById("android-v7a-link"),
       data.android_armeabi_v7a_download_url || "",
-      "Baixar Android APK (armeabi-v7a)"
+      '<span class="button-text-main">Android (Compatível)</span><span class="button-text-sub">Para aparelhos mais antigos</span>',
+      true
     );
 
     const releaseLink = document.getElementById("github-release-link");
