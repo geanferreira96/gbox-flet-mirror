@@ -81,7 +81,7 @@ async function loadUpdateInfo() {
     updateBtn(
       document.getElementById("android-v7a-link"),
       data.android_armeabi_v7a_download_url || "",
-      '<span class="button-text-main">Android (Compatível)</span><span class="button-text-sub">Para aparelhos mais antigos</span>',
+      '<span class="button-text-main">Android (antigos)</span><span class="button-text-sub">Para aparelhos mais antigos</span>',
       true
     );
 
