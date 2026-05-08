@@ -25,6 +25,6 @@
   "github_release": "https://github.com/geanferreira96/gbox-flet-mirror/releases/tag/v2.4.1",
   "win_version": "2.4.1",
   "linux_version": "2.4.1",
-  "android_x86_version": "",
-  "android_x64_version": ""
+  "android_x86_version": "2.3.5",
+  "android_x64_version": "2.3.5"
 }
