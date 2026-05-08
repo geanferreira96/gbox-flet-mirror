@@ -72,16 +72,21 @@ async function loadUpdateInfo() {
       data.linux_installer_url || "",
       "Baixar Instalador Linux (.deb)"
     );
+    // Compatibilidade: prioriza novas chaves (x64/x86), com fallback legadas (arm64-v8a/armeabi-v7a).
+    const androidRecommendedUrl =
+      data.android_x64_download_url || data.android_arm64_v8a_download_url || "";
+    const androidCompatUrl =
+      data.android_x86_download_url || data.android_armeabi_v7a_download_url || "";
     updateBtn(
       document.getElementById("android-v8a-link"),
-      data.android_arm64_v8a_download_url || "",
-      '<span class="button-text-main">Android (Recomendado)</span><span class="button-text-sub">Para a maioria dos celulares atuais</span>',
+      androidRecommendedUrl,
+      '<span class="button-text-main">Android (Recomendado)</span><span class="button-text-sub">Arquitetura x64/arm64</span>',
       true
     );
     updateBtn(
       document.getElementById("android-v7a-link"),
-      data.android_armeabi_v7a_download_url || "",
-      '<span class="button-text-main">Android (antigos)</span><span class="button-text-sub">Para aparelhos mais antigos</span>',
+      androidCompatUrl,
+      '<span class="button-text-main">Android (compatibilidade)</span><span class="button-text-sub">Arquitetura x86/armeabi-v7a</span>',
       true
     );
 
