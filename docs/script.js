@@ -51,6 +51,14 @@ async function loadUpdateInfo() {
     const data = await response.json();
 
     document.getElementById("current-version").textContent = data.version || "Indisponível";
+    document.getElementById("version-win").textContent =
+      data.win_version || data.version || "Indisponível";
+    document.getElementById("version-linux").textContent =
+      data.linux_version || data.version || "Indisponível";
+    document.getElementById("version-android-x64").textContent =
+      data.android_x64_version || data.android_arm64_v8a_version || data.version || "Indisponível";
+    document.getElementById("version-android-x86").textContent =
+      data.android_x86_version || data.android_armeabi_v7a_version || data.version || "Indisponível";
 
     const rawDate = data.updated_at || data.lastUpdate || "";
     let updateText = "Indisponível";
@@ -96,6 +104,10 @@ async function loadUpdateInfo() {
   } catch (error) {
     console.error("Erro ao carregar update.json:", error);
     document.getElementById("current-version").textContent = "Erro ao carregar";
+    document.getElementById("version-win").textContent = "Erro ao carregar";
+    document.getElementById("version-linux").textContent = "Erro ao carregar";
+    document.getElementById("version-android-x64").textContent = "Erro ao carregar";
+    document.getElementById("version-android-x86").textContent = "Erro ao carregar";
     document.getElementById("last-update").textContent = "Erro ao carregar";
     document.getElementById("compiler").textContent = "Erro ao carregar";
     updateBtn(document.getElementById("win-installer-link"), "");
