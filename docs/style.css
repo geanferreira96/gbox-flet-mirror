@@ -108,6 +108,10 @@ section {
   padding: 28px;
 }
 
+section + section {
+  margin-top: 18px;
+}
+
 h2 {
   margin: 0 0 20px 0;
   font-size: 1.4rem;
@@ -205,4 +209,45 @@ footer {
 
 footer a {
   color: inherit;
+}
+
+.partner-card {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  text-decoration: none;
+  color: var(--text-main);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.partner-card:hover {
+  border-color: var(--accent-color);
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.partner-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.partner-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  flex: 0 0 auto;
+}
+
+.partner-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.partner-desc {
+  color: var(--text-muted);
+  font-size: 0.93rem;
 }
