@@ -88,13 +88,13 @@ async function loadUpdateInfo() {
     updateBtn(
       document.getElementById("android-v8a-link"),
       androidRecommendedUrl,
-      '<span class="button-text-main">Android (Recomendado)</span><span class="button-text-sub">Arquitetura x64/arm64</span>',
+      '<span class="button-text-main">Android (Celular)</span><span class="button-text-sub">Arquitetura x64/arm64</span>',
       true
     );
     updateBtn(
       document.getElementById("android-v7a-link"),
       androidCompatUrl,
-      '<span class="button-text-main">Android (compatibilidade)</span><span class="button-text-sub">Arquitetura x86/armeabi-v7a</span>',
+      '<span class="button-text-main">Android (SOL7)</span><span class="button-text-sub">Arquitetura x86/armeabi-v7a</span>',
       true
     );
 
